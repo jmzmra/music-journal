@@ -1,14 +1,6 @@
+import { escapeHtml } from '../core/escapeHtml.js';
 import { renderReviewList } from './reviewList.js';
 import { renderReviewForm } from './reviewForm.js';
-
-function escapeHtml(value) {
-  return value
-    .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-    .replaceAll('"', '&quot;')
-    .replaceAll("'", '&#39;');
-}
 
 export function renderAlbumList(albumsWithReviews) {
   return `

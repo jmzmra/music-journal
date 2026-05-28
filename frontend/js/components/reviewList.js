@@ -1,11 +1,4 @@
-function escapeHtml(value) {
-  return value
-    .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-    .replaceAll('"', '&quot;')
-    .replaceAll("'", '&#39;');
-}
+import { escapeHtml } from '../core/escapeHtml.js';
 
 export function renderReviewList(reviews) {
   if (!reviews.length) {

@@ -1,0 +1,75 @@
+:root {
+  color-scheme: light;
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fb;
+  color: #1a1f2b;
+}
+
+.app-shell {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 8px;
+}
+
+p {
+  margin: 0 0 12px;
+}
+
+.album-list {
+  display: grid;
+  gap: 16px;
+}
+
+.album-card {
+  background: #fff;
+  border: 1px solid #dce2f0;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.review-list {
+  margin: 8px 0 12px;
+  padding-left: 20px;
+}
+
+.review-list li {
+  margin-bottom: 6px;
+}
+
+.review-form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.review-form input {
+  flex: 1;
+  min-width: 220px;
+  padding: 8px;
+  border: 1px solid #b9c5df;
+  border-radius: 6px;
+}
+
+.review-form button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #2f6fed;
+  color: #fff;
+  cursor: pointer;
+}
+
+.review-form button:hover {
+  background: #2558bd;
+}

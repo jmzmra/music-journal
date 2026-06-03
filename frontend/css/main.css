@@ -63,13 +63,24 @@
   --accent-secondary: #9958F5;
 }
 
-body {
+html, body {
   margin: 0;
   background-color: var(--bg);
   color: var(--text);
   font-family: var(--font-family);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  overflow-x: hidden; 
+  overflow-y: visible;
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#app, .app-root-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 40px 64px;
+  
+  /* CRITICAL: Do NOT put overflow: hidden or overflow: auto here */
+  overflow: visible; 
 }

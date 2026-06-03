@@ -1,5 +1,5 @@
 /* =====================================================================
-   FEATURED PAGE
+   FEATURED PAGE (CLEAN VERSION)
    ===================================================================== */
 
 .home-container .featured-header-story {
@@ -8,7 +8,6 @@
     margin-bottom: 48px;
 }
 
-/* GRID */
 .home-container .featured-header-story .editorial-grid {
     display: grid;
     grid-template-columns: 1.15fr 1.35fr;
@@ -16,7 +15,6 @@
     align-items: center;
 }
 
-/* TEXT BLOCK */
 .home-container .feature-text-block .feature-header-line {
     font-size: 11px;
     font-weight: 700;
@@ -34,90 +32,133 @@
     font-weight: 700;
     line-height: 1.2;
     color: var(--text);
-    margin: 0 0 16px 0;
+    margin: 0;
     letter-spacing: -0.75px;
 }
 
-.home-container .feature-text-block .heading-hero span {
-    background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+.home-container .feature-text-block .heading-hero a {
+    color: inherit;
+    text-decoration: none;
+    background-image: linear-gradient(135deg, var(--accent), var(--accent-secondary));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    transition: opacity 0.2s ease;
+}
+
+.home-container .feature-text-block .heading-hero a:hover {
+    opacity: 0.85;
 }
 
 .home-container .feature-text-block .desc-hero {
     font-size: 15px;
     line-height: 1.6;
     color: var(--muted);
-    margin-bottom: 24px;
+    margin-top: 16px;
 }
 
-/* BUTTONS */
 .home-container .feature-action-row {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: none;
 }
 
-.home-container .feature-action-row .btn-primary {
-    background-color: transparent;
-    border: var(--border-width) solid var(--accent);
-    color: var(--text);
-    padding: 12px 28px;
-    border-radius: 100px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.25s ease;
-}
+/* ======================================================
+   EDITORIAL LYRIC CARD
+   ====================================================== */
 
-.home-container .feature-action-row .btn-primary:hover {
-    background-color: var(--accent);
-    box-shadow: 0 0 15px var(--accent-shadow);
-}
-
-/* QUOTE CARD */
 .home-container .feature-side-showcase .quote-showcase {
-    background-color: var(--card);
+    background: var(--card);
     border: var(--border-width) solid var(--border);
-    padding: 32px;
-    border-radius: 16px;
+    border-radius: 18px;
+    padding: 28px;
     box-shadow: var(--shadow);
-}
 
-.home-container .quote-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.home-container .badge-editorial {
-    font-size: 10px;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 1px;
+.home-container .quote-label {
+    width: fit-content;
+
+    padding: 8px 14px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(135deg,
+            color-mix(in srgb, var(--accent) 16%, transparent),
+            color-mix(in srgb, var(--accent-secondary) 16%, transparent));
+
+    border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--border));
+
     color: var(--accent-secondary);
-    background: color-mix(in srgb, var(--accent-secondary) 12%, transparent);
-    padding: 4px 10px;
-    border-radius: 4px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.home-container .quote-content {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.home-container .album-cover {
+    flex-shrink: 0;
+
+    width: 140px;
+    height: 140px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+    border: var(--border-width) solid var(--border);
+}
+
+.home-container .album-cover img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.home-container .quote-details {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
 }
 
 .home-container .quote-heading {
+    margin: 0;
+
     font-size: 22px;
-    font-weight: 700;
-    line-height: 1.4;
+    line-height: 1.5;
     font-style: italic;
-    margin-bottom: 24px;
+    font-weight: 600;
+
+    color: var(--text);
 }
 
 .home-container .quote-author-profile {
     display: flex;
-    align-items: center;
-    gap: 12px;
-    border-top: 1px solid var(--border);
-    padding-top: 16px;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.home-container .author-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.home-container .album-context {
+    font-size: 13px;
+    color: var(--muted);
 }
 
 /* =====================================================================

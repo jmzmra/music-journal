@@ -2,37 +2,65 @@ export function renderFeaturedPage(albums) {
   return `
     <main class="home-container">
       
-      <!-- 1. GENIUS FEATURE ARTICLE STYLE (Reference: image_a4a2e6.jpg) -->
+      <!-- FEATURED ARTICLE -->
       <section class="featured-header-story">
         <div class="editorial-grid">
+
           <div class="feature-text-block">
+
             <div class="feature-header-line">FEATURE</div>
-            <h1 class="heading-hero">Charli XCX's <span>"360"</span> Decodes the Algorithmic Obsession of Modern Fame.</h1>
-            <p class="desc-hero">An inside look at high-velocity production layers, hyperpop references, and why this standout release serves as the ultimate mirror of contemporary internet status. We dissect synths and visual signatures.</p>
-            <div class="feature-action-row">
-              <button class="btn btn-primary" onclick="window.location.hash='#album-detail?id=1'">Read Analysis</button>
-              <span class="read-metadata">5 min read • Volume Editorial Board</span>
-            </div>
+
+            <h1 class="heading-hero">
+              <a href="#album-detail?id=1" class="hero-title-link">
+                Charli XCX's <span>"360"</span> Decodes the Algorithmic Obsession of Modern Fame.
+              </a>
+            </h1>
+
+            <p class="desc-hero">
+              An inside look at high-velocity production layers, hyperpop references, and why this standout release serves as the ultimate mirror of contemporary internet status. We dissect synths and visual signatures.
+            </p>
+
           </div>
-          
+
           <div class="feature-side-showcase">
             <div class="quote-showcase">
-              <div class="quote-header">
-                <span class="badge-editorial">Highlight Quote</span>
-                <span class="page-marker">Page 12</span>
-              </div>
-              <blockquote class="quote-heading">"I'm everywhere, I'm so diva... I'm your favorite reference, baby."</blockquote>
-              <div class="quote-author-profile">
-                <div class="author-avatar-wrapper">
-                  <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="24" fill="var(--accent)" /><circle cx="22" cy="22" r="3" fill="#fff" /><circle cx="38" cy="22" r="3" fill="#fff" /><path d="M22,34 Q30,40 38,34" fill="none" stroke="#fff" stroke-width="3" /></svg>
+
+                <div class="quote-label">
+                    ✦ Featured Lyric
                 </div>
-                <div class="author-meta">
-                  <div class="author-name">Charli XCX</div>
-                  <div class="album-context">Brat (2024)</div>
+
+                <div class="quote-content">
+
+                    <div class="album-cover">
+                        <img
+                            src="https://placehold.co/500x500"
+                            alt="Brat Album Cover">
+                    </div>
+
+                    <div class="quote-details">
+
+                        <blockquote class="quote-heading">
+                            "I'm everywhere, I'm so diva...
+                            I'm your favorite reference, baby."
+                        </blockquote>
+
+                        <div class="quote-author-profile">
+                            <div class="author-name">
+                                Charli XCX
+                            </div>
+
+                            <div class="album-context">
+                                Brat • 2024
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
-              </div>
+
             </div>
           </div>
+
         </div>
       </section>
 
